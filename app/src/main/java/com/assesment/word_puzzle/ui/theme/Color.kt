@@ -2,10 +2,15 @@ package com.assesment.word_puzzle.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-val Purple80 = Color(0xFFD0BCFF)
-val PurpleGrey80 = Color(0xFFCCC2DC)
-val Pink80 = Color(0xFFEFB8C8)
-
-val Purple40 = Color(0xFF6650a4)
-val PurpleGrey40 = Color(0xFF625b71)
-val Pink40 = Color(0xFF7D5260)
+val Night = Color(0xFF071612)
+val Deep = Color(0xFF12382C)
+val Leaf = Color(0xFF1B4332)
+val Mint = Color(0xFFB7E4C7)
+val Cream = Color(0xFFFFF8EE)
+val Parchment = Color(0xFFF3E6CC)
+val Gold = Color(0xFFE9C46A)
+val GoldDeep = Color(0xFFC4922A)
+val Ink = Color(0xFF1D1A16)
+val Coral = Color(0xFFE07A5F)
+val TileHidden = Color(0xFFE7D3A1)
+val TileFound = Color(0xFF1B4332)

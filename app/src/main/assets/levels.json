@@ -1,0 +1,220 @@
+{
+  "levels": [
+    {
+      "id": 1,
+      "name": "First Sprout",
+      "letters": "CAT",
+      "bonusWords": [],
+      "placements": [
+        { "word": "CAT", "row": 0, "col": 0, "vertical": false },
+        { "word": "ACT", "row": 0, "col": 1, "vertical": true }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Puppy Trail",
+      "letters": "DOG",
+      "bonusWords": [],
+      "placements": [
+        { "word": "DOG", "row": 1, "col": 0, "vertical": false },
+        { "word": "GOD", "row": 0, "col": 1, "vertical": true }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Morning Dew",
+      "letters": "EAR",
+      "bonusWords": ["ERA"],
+      "placements": [
+        { "word": "EAR", "row": 0, "col": 0, "vertical": false },
+        { "word": "ARE", "row": 0, "col": 1, "vertical": true }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Taproot",
+      "letters": "TAP",
+      "bonusWords": ["APT"],
+      "placements": [
+        { "word": "TAP", "row": 1, "col": 0, "vertical": false },
+        { "word": "PAT", "row": 0, "col": 1, "vertical": true }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Sunny Spot",
+      "letters": "SPOT",
+      "bonusWords": ["TOPS", "POST", "OPTS", "TOP", "POT", "OPT"],
+      "placements": [
+        { "word": "SPOT", "row": 0, "col": 0, "vertical": false },
+        { "word": "STOP", "row": 0, "col": 0, "vertical": true },
+        { "word": "POTS", "row": 0, "col": 1, "vertical": true }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Care Garden",
+      "letters": "CARE",
+      "bonusWords": ["ACRE", "ACER", "ARC", "CAR", "ERA"],
+      "placements": [
+        { "word": "CARE", "row": 0, "col": 0, "vertical": false },
+        { "word": "RACE", "row": 0, "col": 2, "vertical": true },
+        { "word": "ACE", "row": 0, "col": 1, "vertical": true }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Picnic",
+      "letters": "MEAT",
+      "bonusWords": ["TAME", "META", "TEA", "ATE", "EAT", "MET", "MAT"],
+      "placements": [
+        { "word": "MATE", "row": 0, "col": 1, "vertical": false },
+        { "word": "MEAT", "row": 0, "col": 1, "vertical": true },
+        { "word": "TEAM", "row": 1, "col": 0, "vertical": false }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Birdsong",
+      "letters": "BIRD",
+      "bonusWords": ["BID", "RID"],
+      "placements": [
+        { "word": "RIB", "row": 1, "col": 0, "vertical": false },
+        { "word": "BIRD", "row": 0, "col": 1, "vertical": true }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Sea Glass",
+      "letters": "SALE",
+      "bonusWords": ["LEAS", "ALE", "SEA", "LEA"],
+      "placements": [
+        { "word": "SEAL", "row": 0, "col": 0, "vertical": false },
+        { "word": "SALE", "row": 0, "col": 0, "vertical": true },
+        { "word": "ALES", "row": 0, "col": 2, "vertical": true }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Stone Path",
+      "letters": "STONE",
+      "bonusWords": ["NEST", "NOTE", "TONE", "ONES", "NOSE", "SENT", "TOES", "NETS", "ONSET", "TENS"],
+      "placements": [
+        { "word": "NOTES", "row": 0, "col": 1, "vertical": false },
+        { "word": "STONE", "row": 2, "col": 0, "vertical": false },
+        { "word": "TONES", "row": 0, "col": 3, "vertical": true }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Hearth",
+      "letters": "HEART",
+      "bonusWords": ["HARE", "HATE", "TARE", "HART", "EARTH", "HATER", "ART", "EAR", "ATE", "TEA", "ERA", "HAT", "TAR", "RAT"],
+      "placements": [
+        { "word": "HEART", "row": 0, "col": 0, "vertical": false },
+        { "word": "HEAT", "row": 0, "col": 0, "vertical": true },
+        { "word": "RATE", "row": 0, "col": 3, "vertical": true },
+        { "word": "TEAR", "row": 0, "col": 4, "vertical": true }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Crane Pond",
+      "letters": "CRANE",
+      "bonusWords": ["CARE", "EARN", "ACNE", "CANE", "ACER", "ARC", "CAR", "RAN", "ERA", "ACE", "CAN"],
+      "placements": [
+        { "word": "CRANE", "row": 0, "col": 0, "vertical": false },
+        { "word": "RACE", "row": 0, "col": 1, "vertical": true },
+        { "word": "NEAR", "row": 0, "col": 3, "vertical": true }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Lantern",
+      "letters": "LIGHT",
+      "bonusWords": ["LIT", "HIT"],
+      "placements": [
+        { "word": "LIGHT", "row": 0, "col": 0, "vertical": false },
+        { "word": "GILT", "row": 0, "col": 2, "vertical": true },
+        { "word": "HILT", "row": 0, "col": 3, "vertical": true }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Riverbend",
+      "letters": "WATER",
+      "bonusWords": ["TEAR", "WARE", "WART", "TARE", "WAR", "EAR", "ARE", "ATE", "TEA", "WET", "RAW", "TAR", "RAT", "ART"],
+      "placements": [
+        { "word": "WATER", "row": 0, "col": 0, "vertical": false },
+        { "word": "WEAR", "row": 0, "col": 0, "vertical": true },
+        { "word": "RATE", "row": 0, "col": 4, "vertical": true }
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Paper Plane",
+      "letters": "PLANE",
+      "bonusWords": ["PANE", "PLAN", "PLEA", "LEAP", "PEAL", "PALE", "NAPE", "PENAL", "LANE", "NAP", "PAN", "PEN", "APE", "ALE", "PEA"],
+      "placements": [
+        { "word": "PLANE", "row": 0, "col": 0, "vertical": false },
+        { "word": "PANEL", "row": 0, "col": 0, "vertical": true },
+        { "word": "LEAN", "row": 0, "col": 1, "vertical": true }
+      ]
+    },
+    {
+      "id": 16,
+      "name": "Smile",
+      "letters": "SMILE",
+      "bonusWords": ["MILES", "LIME", "MILE", "LIES", "SLIM", "SEMI", "ELMS", "ELM"],
+      "placements": [
+        { "word": "SLIME", "row": 0, "col": 0, "vertical": false },
+        { "word": "SMILE", "row": 0, "col": 0, "vertical": true },
+        { "word": "LIMES", "row": 0, "col": 1, "vertical": true }
+      ]
+    },
+    {
+      "id": 17,
+      "name": "Oak Board",
+      "letters": "BOARD",
+      "bonusWords": ["BOAR", "BARD", "BRAD", "DRAB", "BAD", "BAR", "ROB", "ROD", "OAR", "DAB", "BRA", "ORB"],
+      "placements": [
+        { "word": "BROAD", "row": 0, "col": 0, "vertical": false },
+        { "word": "BOARD", "row": 0, "col": 0, "vertical": true },
+        { "word": "ROAD", "row": 0, "col": 1, "vertical": true }
+      ]
+    },
+    {
+      "id": 18,
+      "name": "Trace Path",
+      "letters": "TRACE",
+      "bonusWords": ["REACT", "CATER", "CARE", "TEAR", "CART", "RATE", "TARE", "ACRE", "CAT", "CAR", "ARC", "ART", "EAR", "TEA", "ATE", "ACE", "ERA", "TAR", "RAT"],
+      "placements": [
+        { "word": "TRACE", "row": 0, "col": 0, "vertical": false },
+        { "word": "CRATE", "row": 0, "col": 3, "vertical": true },
+        { "word": "RACE", "row": 0, "col": 1, "vertical": true }
+      ]
+    },
+    {
+      "id": 19,
+      "name": "Echo",
+      "letters": "SOUND",
+      "bonusWords": ["UNDO", "SUN", "SON", "NOD", "DON", "DUO"],
+      "placements": [
+        { "word": "NODS", "row": 0, "col": 1, "vertical": false },
+        { "word": "SOUND", "row": 2, "col": 0, "vertical": false },
+        { "word": "DONS", "row": 0, "col": 3, "vertical": true }
+      ]
+    },
+    {
+      "id": 20,
+      "name": "Rain Barrel",
+      "letters": "BRAIN",
+      "bonusWords": ["BRAN", "AIR", "BAR", "BIN", "BAN", "RAN", "RIB", "NAB"],
+      "placements": [
+        { "word": "BRAIN", "row": 0, "col": 0, "vertical": false },
+        { "word": "BARN", "row": 0, "col": 0, "vertical": true },
+        { "word": "RAIN", "row": 0, "col": 1, "vertical": true }
+      ]
+    }
+  ]
+}
