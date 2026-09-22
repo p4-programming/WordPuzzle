@@ -72,6 +72,7 @@ fun WordPuzzleNavHost(session: GameSessionViewModel) {
             arguments = listOf(navArgument("levelId") { type = NavType.IntType }),
         ) { entry ->
             val levelId = entry.arguments?.getInt("levelId") ?: return@composable
+            if (levelId == 0) return@composable
             GameScreen(
                 levelId = levelId,
                 session = session,
@@ -80,8 +81,7 @@ fun WordPuzzleNavHost(session: GameSessionViewModel) {
                 },
                 onNextLevel = { nextId ->
                     navController.navigate(Routes.game(nextId)) {
-                        popUpTo(Routes.game(levelId)) { inclusive = true }
-                        launchSingleTop = true
+                        popUpTo(entry.destination.id) { inclusive = true }
                     }
                 },
                 onAllClear = {
@@ -100,6 +100,7 @@ fun WordPuzzleNavHost(session: GameSessionViewModel) {
             arguments = listOf(navArgument("levelId") { type = NavType.IntType }),
         ) { entry ->
             val levelId = entry.arguments?.getInt("levelId") ?: return@composable
+            if (levelId == 0) return@composable
             val level = session.level(levelId)
             PauseScreen(
                 levelNumber = levelId,

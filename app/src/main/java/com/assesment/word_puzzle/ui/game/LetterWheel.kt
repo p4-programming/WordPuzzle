@@ -1,7 +1,6 @@
 package com.assesment.word_puzzle.ui.game
 
 import androidx.compose.animation.core.Animatable
-import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.spring
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Canvas
@@ -31,7 +30,6 @@ import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.graphics.drawscope.scale
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.input.pointer.pointerInput
-import androidx.compose.ui.input.pointer.positionChange
 import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
@@ -48,6 +46,7 @@ import com.assesment.word_puzzle.ui.theme.Cream
 import com.assesment.word_puzzle.ui.theme.Gold
 import com.assesment.word_puzzle.ui.theme.GoldDeep
 import com.assesment.word_puzzle.ui.theme.Ink
+import kotlinx.coroutines.launch
 import kotlin.math.PI
 import kotlin.math.cos
 import kotlin.math.roundToInt
@@ -67,12 +66,17 @@ fun LetterWheel(
     val haptics = LocalHapticFeedback.current
     val textMeasurer = rememberTextMeasurer()
     val shake = remember { Animatable(0f) }
-    val scales = letters.indices.map { index ->
-        animateFloatAsState(
-            targetValue = if (index in selected) 1.16f else 1f,
-            animationSpec = spring(dampingRatio = 0.62f, stiffness = 520f),
-            label = "letterScale$index",
-        )
+    val scales = remember(letters.size) { List(letters.size) { Animatable(1f) } }
+
+    LaunchedEffect(selected, letters.size) {
+        scales.forEachIndexed { index, scale ->
+            val target = if (index in selected) 1.16f else 1f
+            launch {
+                if (scale.targetValue != target) {
+                    scale.animateTo(target, spring(dampingRatio = 0.62f, stiffness = 520f))
+                }
+            }
+        }
     }
 
     LaunchedEffect(shakeKey) {
@@ -115,7 +119,6 @@ fun LetterWheel(
                         awaitEachGesture {
                             var current = emptyList<Int>()
                             val down = awaitFirstDown()
-                            down.consume()
                             var last = down.position
 
                             val wheelSize = Size(size.width.toFloat(), size.height.toFloat())
@@ -136,7 +139,7 @@ fun LetterWheel(
 
                             apply(down.position)
                             drag(down.id) { change ->
-                                if (change.positionChange() != Offset.Zero) change.consume()
+                                change.consume()
                                 apply(change.position)
                             }
                             val word = current.joinToString("") { letters[it].toString() }

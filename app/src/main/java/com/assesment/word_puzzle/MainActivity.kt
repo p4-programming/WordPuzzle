@@ -7,12 +7,10 @@ import androidx.activity.ComponentActivity
 import androidx.activity.SystemBarStyle
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.activity.viewModels
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Surface
-import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
-import androidx.lifecycle.viewmodel.compose.viewModel
 import com.assesment.word_puzzle.data.LevelRepository
 import com.assesment.word_puzzle.ui.navigation.WordPuzzleNavHost
 import com.assesment.word_puzzle.ui.session.GameSessionViewModel
@@ -20,6 +18,10 @@ import com.assesment.word_puzzle.ui.theme.Night
 import com.assesment.word_puzzle.ui.theme.WordPuzzleTheme
 
 class MainActivity : ComponentActivity() {
+    private val session: GameSessionViewModel by viewModels {
+        GameSessionViewModel.factory(LevelRepository.load(applicationContext))
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         window.setBackgroundDrawable(ColorDrawable(Color.parseColor("#071612")))
@@ -29,11 +31,6 @@ class MainActivity : ComponentActivity() {
         )
         setContent {
             WordPuzzleTheme {
-                val context = LocalContext.current
-                val levels = remember { LevelRepository.load(context) }
-                val session: GameSessionViewModel = viewModel(
-                    factory = remember(levels) { GameSessionViewModel.factory(levels) },
-                )
                 Surface(modifier = Modifier.fillMaxSize(), color = Night) {
                     WordPuzzleNavHost(session)
                 }
